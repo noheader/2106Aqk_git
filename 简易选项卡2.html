@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+<header>
+    <span>第一节课</span>
+    <span>第二节课</span>
+    <span>第三节课</span>
+    <span>第四节课</span>
+</header>
+<ul style="display: block;">
+    <li>哈哈哈哈</li>
+    <li>哈哈哈哈</li>
+    <li>哈哈哈哈</li>
+    <li>哈哈哈哈</li>
+    <li>哈哈哈哈</li>
+    <li>哈哈哈哈</li>
+</ul>
+<ul style="display: none;">
+    <li>伍月梅呵呵呵</li>
+    <li>伍月梅呵呵呵</li>
+    <li>伍月梅呵呵呵</li>
+    <li>伍月梅呵呵呵</li>
+    <li>伍月梅呵呵呵</li>
+    <li>伍月梅呵呵呵</li>
+</ul>
+<ul style="display: none;">
+    <li>呀呀呀呀</li>
+    <li>呀呀呀呀</li>
+    <li>呀呀呀呀</li>
+    <li>呀呀呀呀</li>
+    <li>呀呀呀呀</li>
+    <li>呀呀呀呀</li>
+</ul>
+    </div>
+</body>
+<style>
+    .box{
+        width: 600px;
+        margin: 0 auto;
+    }
+    header{
+        width: 600px;
+        height: 50px;
+        line-height: 50px;
+        background: #000;
+        color: #FFF;
+    }
+    span{
+        margin: 0 5px;
+    }
+    .Addcolor{
+        color: #FFF;
+        background: red;
+    }
+</style>
+<script>
+    var uls=document.getElementsByTagName("ul");
+    var spans=document.getElementsByTagName("span");
+     for(var i=0;i<spans.length;i++){
+    //  spans[i].setAttribute("index",i) //方法一
+    spans[i].index=i; //方法2
+     spans[i].onmouseover=function(){
+         for(var i=0;i<spans.length;i++){
+             spans[i].className=""
+         }
+         this.className="Addcolor";
+         var index=this.getAttribute("index");
+         for(var i=0;i<uls.length;i++){
+             uls[i].style.display="none"
+         }
+         uls[this.index].style.display="block"
+     }
+     }
+</script>
+<style>
+   
+</style>
+</html>
