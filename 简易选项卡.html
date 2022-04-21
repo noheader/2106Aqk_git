@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+<header>
+    <span>第一节课</span>
+    <span>第二节课</span>
+    <span>第三节课</span>
+    <span>第四节课</span>
+</header>
+<ul style="display: block;">
+    <li>哈哈哈</li>
+    <li>哈哈哈</li>
+    <li>哈哈哈</li>
+    <li>哈哈哈</li>
+</ul>
+<ul style="display: none;">
+    <li>嘿嘿嘿</li>
+    <li>嘿嘿嘿</li>
+    <li>嘿嘿嘿</li>
+    <li>嘿嘿嘿</li>
+</ul>
+<ul style="display: none;">
+    <li>呵呵呵</li>
+    <li>呵呵呵</li>
+    <li>呵呵呵</li>
+    <li>呵呵呵</li>
+</ul>
+<ul style="display: none;">
+    <li>啊啊啊</li>
+    <li>啊啊啊</li>
+    <li>啊啊啊</li>
+    <li>啊啊啊</li>
+</ul>
+    </div>
+</body>
+<style>
+    .box{
+        width: 600px;
+        margin: 0 auto;
+    }
+header{
+    width: 600px;
+    height: 30px;
+    line-height: 30px;
+    background: black;
+    color: #fff;
+}
+span{
+    margin: 0 5px;
+}
+.active{
+    background: red;
+    color: #fff;
+}
+</style>
+<script>
+    var spans=document.getElementsByTagName("span");
+    var uls=document.getElementsByTagName("ul");
+    for(var i=0;i<spans.length;i++){
+        spans[i].index=i;
+        spans[i].onmouseover=function(){
+            for(var j=0;j<spans.length;j++){
+                 spans[j].className=""
+            }
+           spans[this.index].className="active";
+           for(var j=0;j<uls.length;j++){
+               uls[j].style.display="none"
+           }
+           uls[this.index].style.display="block"
+        }
+        
+    }
+
+</script>
+</html>

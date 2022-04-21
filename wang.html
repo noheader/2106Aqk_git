@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>复选框的选择</title>
+  <style>
+    #btn{
+      margin: 5px auto;
+    }
+    #btn>input{
+      font-size: 16px;
+      color: #fff;
+      background-color: rgb(110, 34, 182);
+      outline: none;
+    }
+    #city{
+      background-color: aqua;
+    }
+  </style>
+ 
+  <script>
+    window.onload=function(){
+ 
+      var obt1 = document.getElementById('btn1');
+      var obt2 = document.getElementById('btn2');
+      var obt3 = document.getElementById('btn3');
+      var ocity = document.getElementById('city');
+      var oinput = ocity.getElementsByTagName('input');
+ 
+      obt1.onclick=function(){
+        for(var i=0;i<oinput.length;i++)
+        {
+          oinput[i].checked=true;
+        }
+      }
+      obt2.onclick=function(){
+        for(var i=0;i<oinput.length;i++)
+        {
+          oinput[i].checked=false;
+        }
+      }
+      obt3.onclick=function(){
+        for(var i=0;i<oinput.length;i++)
+        {
+          if(oinput[i].checked==false)
+          {
+            oinput[i].checked=true;
+          }else{
+            oinput[i].checked=false;
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+  <div id="btn">
+    <input type="button" id="btn1" value="全选">
+    <input type="button" id="btn2" value="全不选">
+    <input type="button" id="btn3" value="反选">
+  </div>
+  <div id="city">
+    <input type="checkbox">北京<br>
+    <input type="checkbox">上海<br>
+    <input type="checkbox">广州<br>
+    <input type="checkbox">深圳<br>
+    <input type="checkbox">武汉<br>
+  </div>
+</body>
+</html>
