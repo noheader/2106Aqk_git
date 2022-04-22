@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box" onmouseover="yiru()" onmouseout="yichu()">
+<div class="box1">
+<p>移入移出改变颜色</p>
+</div>
+    </div>
+</body>
+<style>
+    .box{
+        width: 300px;
+        height: 300px;
+        background: #000;
+        margin: 0 auto;
+        position: relative;
+    }
+    .box1{
+        width: 200px;
+        height: 200px;
+        background: #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: #FFF;
+    }
+</style>
+<script>
+    var box=document.getElementsByClassName("box")[0];
+    var box1=document.getElementsByClassName("box1")[0];
+    function yiru(){
+        box.style.background="red"
+        box1.style.background="#fff"
+        box1.style.color="red"
+    };
+    function yichu(){
+        box.style.background="#000"
+        box1.style.background="#000"
+        box1.style.color="#FFF"
+    }
+</script>
+</html>

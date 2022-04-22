@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" value="10,20,30">
+    <span>输入数字求和,数字之间用半角","隔开</span><br>
+  <button>求和</button>
+  <strong id="sum"></strong>
+</body>
+<script>
+var inp=document.getElementsByTagName("input")[0];
+var btn=document.getElementsByTagName("button")[0];
+var Psum=document.getElementById("sum");
+btn.onclick=function(){
+    var inp=document.getElementsByTagName("input")[0].value.split(",");
+    var Osum=0;
+    for(var i in inp){
+        Osum+=parseInt(inp[i])
+    }
+    Psum.innerHTML=Osum
+}
+</script>
+<style>
+
+</style>
+</html>

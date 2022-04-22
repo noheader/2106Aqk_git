@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div class="box">
+       <span>全选</span><input type="checkbox" class="checkAll"> <a href="" onclick="fx()">反选</a>
+       <ul>
+           <li><input type="checkbox" class="checked">哈哈</li>
+           <li><input type="checkbox" class="checked">哈哈</li>
+           <li><input type="checkbox" class="checked">哈哈</li>
+           <li><input type="checkbox" class="checked">哈哈</li>
+       </ul>
+  </div>
+  <script>
+      var checkAll=document.getElementsByClassName("checkAll")[0];
+      var checked=document.querySelectorAll(".checked");
+      checkAll.onclick=function(){
+   for(var i=0;i<checked.length;i++){
+       checked[i].checked=checkAll.checked
+   };
+   for(var i=0;i<checked.length;i++){
+       checked[i].onclick=function(){
+           for(var n=0,j=0;j<checked.length;j++){
+               if(checked[j].checked){
+           n++;
+       }
+       if(n===j){
+           checkAll.checked=false
+       }else{
+        checkAll.checked=true
+       }    
+           }
+        
+       }
+      
+   }
+};
+      
+     function fx(){
+        //  alert("反选")
+        var checked=document.querySelectorAll(".checked");
+for(var i=0;i<checked.length;i++){
+    checked[i].checked=!checked[i].checked
+}
+     }
+  </script>
+</body>
+</html>
