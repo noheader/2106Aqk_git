@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+<input type="text" style="width: 100px;" class="one" value="12">
++
+<input type="text" style="width: 100px;" class="two" value="12">
+<strong>24</strong>
+<button onclick="qh()">求和</button>
+    </div>
+    <style>
+        .box{
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+        }
+    </style>
+    <script>
+        var one=document.getElementsByClassName("one")[0];
+        var two=document.getElementsByClassName("two")[0];
+       function qh(){
+        var str=document.getElementsByTagName("strong")[0];
+        console.log(str)
+            var sum=0;
+        var one=document.getElementsByClassName("one")[0].value;
+        var two=document.getElementsByClassName("two")[0].value;
+            sum+=parseInt(one)+parseInt(two);
+            // alert(sum)
+            str.innerHTML=sum;
+        }
+    </script>
+</body>
+</html>

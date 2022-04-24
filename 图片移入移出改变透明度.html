@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+        <img src="../tupian/1.jpg" alt="" style="border: 1px solid #999">
+    </div>
+</body>
+<script>
+var Oimg=document.getElementsByTagName("img")
+for(var i=0;i<8;i++){
+    Oimg[i].onmouseover=function(){
+        this.style.opacity = "1.0";
+    };
+    Oimg[i].onmouseout=function(){
+        this.style.opacity = "0.5";
+    };
+}
+</script>
+<style>
+    .box{
+        width: 535px;
+        height: 262px;
+        border: 2px solid red;
+        margin: 0 auto;
+    }
+    img{
+        opacity: 0.5;
+    }
+</style>
+</html>
